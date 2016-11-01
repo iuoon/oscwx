@@ -22,7 +22,7 @@ position:absolute;right:5px;top:5px;z-index:999;
 }
 .title{
    text-align:center;
-margin:auto;
+   margin:auto;
    color:white;
    line-height:50px;
    font-size:18px;

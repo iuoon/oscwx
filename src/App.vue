@@ -8,6 +8,7 @@
 @import '~vux/src/styles/reset';
 body {
   background-color: #fbf9fe;
+  line-height: 1.2;
 }
 </style>
 
