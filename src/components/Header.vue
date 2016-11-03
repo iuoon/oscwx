@@ -1,10 +1,6 @@
 <template>
-  <!--<div class="tabbar">
-    <div class="title">{{title}}</div>
-  </div>-->
-
   <tabbar class="tabbar">
-    <div class="title">{{title}}</div>
+    <div class="title">{{tag}}</div>
     <tabbar-item class="search">
       <img slot="icon" src="../assets/image/actionbar_search_icon.png">
     </tabbar-item>
@@ -31,24 +27,22 @@ position:absolute;right:5px;top:5px;z-index:999;
 <script>
 import Tabbar from 'vux/dist/components/tabbar'
 import TabbarItem from 'vux/dist/components/tabbar-item'
+import { getTag } from '../vuex/getters'
+
     export default{
      name: 'AppHeader',
      components: {
        Tabbar,
        TabbarItem,
      },
-     data(){
-            return{
-                title:'综合'
-            }
+     vuex: {
+       getters: {
+            // 注意在这里你需要 `getTag` 函数本身而不是它的执行结果 'getTag()'
+            tag: getTag
+        }
      },
      methods: {
-       resultClick (item) {
-          alert('you click the result item: ' + JSON.stringify(item))
-       },
-       getResult (val) {
-          this.results = val
-       }
+
      },
     }
 

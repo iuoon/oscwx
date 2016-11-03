@@ -10,10 +10,11 @@
     "test": ""
   },
   "dependencies": {
-    "vue": "^1.0.21",
     "babel-runtime": "^6.0.0",
-    "vux": "^0.1.1",
-    "vue-router": "^0.7.11"
+    "vue": "^1.0.21",
+    "vue-router": "^0.7.11",
+    "vuex": "^1.0.0",
+    "vux": "^0.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

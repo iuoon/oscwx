@@ -1,7 +1,6 @@
 <template>
   <div>
     <app-header></app-header>
-
     <tab :line-width="2" >
       <tab-item :selected="tag === item" v-for="item in taglist" @click="tag = item">{{item}}</tab-item>
     </tab>
@@ -12,7 +11,7 @@
 <style>
 @import '~vux/dist/vux.css';
 body{
-line-height: 1.2;
+line-height: 1.2; /* 设置行间距为1.2 ,默认是1.6的太大*/
 }
 </style>
 <script>
@@ -24,7 +23,12 @@ line-height: 1.2;
   import AppHeader from './Header'
   import AppFooter from './Footer'
   import NewsList from './NewsList'
-  import ScrollerDemo from './scrollerdemo'
+  import Tabbar from 'vux/dist/components/tabbar'
+  import TabbarItem from 'vux/dist/components/tabbar-item'
+
+  import { incrementag } from '../vuex/actions'
+
+
 
   export default {
     data () {
@@ -42,7 +46,11 @@ line-height: 1.2;
       Cell,
       Group,
       NewsList,
-      ScrollerDemo
+  },
+  vuex: {
+     actions: {
+        increment: incrementag
+     }
   },
   ready () {
 
