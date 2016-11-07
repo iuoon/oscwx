@@ -56,7 +56,8 @@ font-size:5px;
         components:{
             Scroller,
             Cell,
-            Group
+            Group,
+            Divider
         },
         ready () {
           this.getList()
@@ -76,19 +77,19 @@ font-size:5px;
 
                       if(minutes>=60){
                          minutes=minutes/60;
+                         var datetime=parseInt(minutes);
+                         if(datetime>=48){
+                            news_list[i].pubDate="2天前"
+                         }else if(datetime>=24){
+                            news_list[i].pubDate="昨天"
+                         }else{
+                            news_list[i].pubDate=datetime+ "小时以前"
+                         }
                        }else{
                          var minute=parseInt(minutes);
                          news_list[i].pubDate=minute+ "分钟以前"
                        }
-                      var datetime=parseInt(minutes);
 
-                      if(datetime>=48){
-                         news_list[i].pubDate="2天前"
-                      }else if(datetime>=24){
-                         news_list[i].pubDate="昨天"
-                      }else{
-                         news_list[i].pubDate=datetime+ "小时以前"
-                      }
                       this.Objlist.push(news_list[i]);
 				          }
 

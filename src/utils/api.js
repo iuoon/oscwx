@@ -34,3 +34,39 @@ export let getNewsDetail = async (id) => {
     console.log(error)
   })
 }
+
+export let getBlogList = async (page, tag) => {
+  let response = await fetch(host_addr+`blog_list?pageIndex=${page}&pageSize=20&catalog=${tag}`, {
+    method: 'GET',
+    mode: 'cors',
+  }).catch((error) => {
+    console.log(error)
+  })
+  return await response.json().catch((error) => {
+    console.log(error)
+  })
+}
+
+export let getEventList = async (page, tag) => {
+  let response = await fetch(host_addr+`event_list?pageIndex=${page}&pageSize=20&catalog=${tag}`, {
+    method: 'GET',
+    mode: 'cors',
+  }).catch((error) => {
+    console.log(error)
+  })
+  return await response.json().catch((error) => {
+    console.log(error)
+  })
+}
+
+export let getQuestionList = async (page, tag) => {
+  let response = await fetch(host_addr+`question_list?pageIndex=${page}&pageSize=20&catalog=${tag}`, {
+    method: 'GET',
+    mode: 'cors',
+  }).catch((error) => {
+    console.log(error)
+  })
+  return await response.json().catch((error) => {
+    console.log(error)
+  })
+}
