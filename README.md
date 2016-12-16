@@ -21,3 +21,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 采用vue+vux做微信版开源中国
 
 转发层服务：https://github.com/iuoon/TWServer
+
+# 开发博客
+http://blog.csdn.net/iuoon/article/details/52911990
