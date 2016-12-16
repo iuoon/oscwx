@@ -1,5 +1,6 @@
 <template>
   <div>
+    <swiper :list="imgs" auto style="width:100%;margin:0 auto;" height="180px" dots-class="custom-bottom" dots-position="center"></swiper>
   <scroller lock-x scrollbar-y height="360px"  :prevent-default="false" v-ref:scroller>
     <div class="news-wrap">
      <cell v-for="x in Objlist"  :title="x.title" v-link="{path: '/newsdetail',query:{id:x.id,tag:'资讯'}}" :inline-desc='x.body'>
@@ -37,11 +38,23 @@ font-size:5px;
 }
 </style>
 <script>
+    import Swiper from 'vux/dist/components/swiper'
     import Scroller from 'vux/dist/components/scroller'
     import Cell from 'vux/dist/components/cell'
     import Group from 'vux/dist/components/group'
     import { getList } from '../utils/api'
     import Divider from 'vux/dist/components/divider'
+
+    const imgList = [
+     'http://file06.16sucai.com/2016/0222/17714c3b51079911760e5ef7fdb553f6.jpg',
+     'http://pic.58pic.com/58pic/15/67/98/93C58PICjeM_1024.jpg',
+     'http://file06.16sucai.com/2016/0315/1df566087c24a94cd9534bc9bc1871ff.jpg'
+     ]
+
+    const urlList = imgList.map((one, index) => ({
+     url: 'javascript:',  //这里填写图片点击的链接
+     img: one
+     }))
 
 
     export default{
@@ -51,13 +64,15 @@ font-size:5px;
                 Objlist:[],
                 pageIndex:1,
                 catalog:0,
+                imgs:urlList,
             }
         },
         components:{
             Scroller,
             Cell,
             Group,
-            Divider
+            Divider,
+            Swiper
         },
         ready () {
           this.getList()
