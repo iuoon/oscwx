@@ -1,9 +1,9 @@
-# oscwx
-
+# oscwx 开源中国微信版
 > oschina weixin
+# 效果图
+![image](https://github.com/iuoon/oscwx/blob/master/static/20161103183700751.png)
 
-## Build Setup
-
+# Build Setup 本地安装步奏
 ``` bash
 # install dependencies
 npm install
