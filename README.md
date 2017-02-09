@@ -3,6 +3,9 @@
 # 效果图
 ![image](https://github.com/iuoon/oscwx/blob/master/static/20161103183700751.png)
 
+##版本说明
+> 该版本为vux 1.x版本 2.x版本参考https://github.com/iuoon/oscwx_2.0
+
 # Build Setup 本地安装步奏
 ``` bash
 # install dependencies
